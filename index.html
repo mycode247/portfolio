@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tanmoy Khanta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+    
+        body {
+            background-color: #1a1a2e;
+            color: #f0f0f0;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+    
+        .scroll-to-section {
+            cursor: pointer;
+        }
+    
+        /* Header background transition */
+        .header {
+            transition: background-color 0.5s ease;
+            background-color: transparent; /* This matches the bg-gray-800 color */
+        }
+    
+        /* When the header is scrolled, we add this class */
+        .header-scrolled {
+            background-color: #111827; /* Black background when scrolled */
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        .animate-float-slow {
+            animation: float 8s ease-in-out infinite;
+        }
+        .animate-float-fast {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+
+
+
+
+</head>
+<body class="bg-gray-900 text-white">
+
+    <header id="header" class="header header-hero w-full py-6 fixed top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Tanmoy Khanta</h1>
+
+            <button id="menu-toggle" class="block md:hidden focus:outline-none">
+                <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#hero" class="scroll-to-section hover:text-teal-400">About Me</a></li>
+                    <li><a href="#skills" class="scroll-to-section hover:text-teal-400">Skills</a></li>
+                    <li><a href="#experience" class="scroll-to-section hover:text-teal-400">Experience</a></li>
+                    <li><a href="#portfolio" class="scroll-to-section hover:text-teal-400">Portfolio</a></li>
+                    <li><a href="#contact" class="scroll-to-section hover:text-teal-400">Contact Me</a></li>
+                </ul>
+            </nav>
+
+            <nav id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-gray-900 md:hidden">
+                <ul class="flex flex-col items-center space-y-6 py-6">
+                    <li><a href="#about" class="scroll-to-section hover:text-teal-400">About Me</a></li>
+                    <li><a href="#skills" class="scroll-to-section hover:text-teal-400">Skills</a></li>
+                    <li><a href="#experience" class="scroll-to-section hover:text-teal-400">Experience</a></li>
+                    <li><a href="#portfolio" class="scroll-to-section hover:text-teal-400">Portfolio</a></li>
+                    <li><a href="#contact" class="scroll-to-section hover:text-teal-400">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+
+    <section id="hero" class="min-h-screen flex items-center justify-between py-20 bg-gradient-to-r from-gray-800 via-gray-700 to-gray-800 relative overflow-hidden">
+        <!-- Animated Floating Shapes -->
+        <div class="absolute top-10 left-20 w-32 h-32 rounded-full bg-teal-400 opacity-20 animate-float"></div>
+        <div class="absolute bottom-20 right-40 w-48 h-48 rounded-full bg-teal-600 opacity-10 animate-float-slow"></div>
+        <div class="absolute top-40 right-10 w-24 h-24 rounded-full bg-teal-300 opacity-20 animate-float-fast"></div>
+    
+        <div class="container mx-auto px-8 flex flex-col md:flex-row items-center justify-between mt-16 relative">
+            <div class="w-full md:w-1/2 text-left">
+                <h2 class="text-4xl md:text-5xl font-bold">Hi, I'm <span class="text-teal-400">Tanmoy Khanta</span></h2>
+                <p class="mt-4 text-md md:text-lg">A Professional <strong>Full Stack Developer</strong> with expertise in both frontend and backend development. I specialize in crafting dynamic, user-friendly web applications that help businesses grow and succeed in the digital world. With a strong foundation in technologies like <strong>React, Next, Vue, Nuxt, Node.js and NestJS</strong>, I turn ideas into scalable and impactful solutions.
+
+                    Let’s collaborate and bring your vision to life!</p>
+                <div class="mt-6">
+                    <!-- Social Icons using FontAwesome -->
+                    <!-- <a href="https://github.com" target="_blank" class="mr-4">
+                        <i class="fab fa-github fa-2x mx-1"></i>
+                    </a> -->
+                    <a href="https://www.linkedin.com/in/tanmoy-khanta/" target="_blank">
+                        <i class="fab fa-linkedin fa-2x mx-1"></i>
+                    </a>
+                    <!-- <a href="https://instagram.com" target="_blank" class="hover:text-teal-400">
+                        <i class="fab fa-instagram fa-2x mx-1"></i>
+                    </a> -->
+                    <a href="mailto:khantatanmoy@gmail.com" class="hover:text-teal-400">
+                        <i class="fas fa-envelope fa-2x mx-1"></i>
+                    </a>
+                    <a href="https://x.com/TanmoyKhanta" target="_blank" class="hover:text-teal-400">
+                        <i class="fab fa-twitter fa-2x mx-1"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="w-full md:w-1/2 mt-10 md:mt-0 flex justify-center relative">
+                <img src="./images/1729853263329.jpeg" alt="Profile Image" class="rounded-full w-64 shadow-lg">
+            </div>
+        </div>
+    </section>
+
+
+
+    
+
+    
+
+
+    <!-- Skills Section -->
+
+    <!-- Skills Section -->
+<section id="skills" class=" py-20 bg-gray-900">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-12">My Skills</h2>
+
+        <!-- Swiper Container for Skills -->
+        <div class="skills-slider skills-slider">
+            <div class="swiper-wrapper">
+                <!-- HTML -->
+                <div class="swiper-slide skill-item">
+                    <i class="devicon-html5-plain colored mx-auto text-6xl"></i>
+                    <h3 class="mt-4 text-sm md:text-lg lg:text-lg">HTML</h3>
+                </div>
+                <!-- CSS -->
+                <div class="swiper-slide skill-item">
+                    <i class="devicon-css3-plain colored mx-auto text-6xl"></i>
+                    <h3 class="mt-4 text-sm md:text-lg lg:text-lg">CSS</h3>
+                </div>
+                <!-- JavaScript -->
+                <div class="swiper-slide skill-item">
+                    <i class="devicon-javascript-plain colored mx-auto text-6xl"></i>
+                    <h3 class="mt-4 text-sm md:text-lg lg:text-lg">JavaScript</h3>
+                </div>
+                <!-- Vue.js -->
+                <div class="swiper-slide skill-item">
+                    <i class="devicon-vuejs-plain colored mx-auto text-6xl"></i>
+                    <h3 class="mt-4 text-sm md:text-lg lg:text-lg">Vue.js</h3>
+                </div>
+                <!-- Nuxt.js -->
+                <div class="swiper-slide skill-item">
+                    <i class="devicon-nuxtjs-plain colored mx-auto text-6xl"></i>
+                    <h3 class="mt-4 text-sm md:text-lg lg:text-lg">Nuxt.js</h3>
+                </div>
+                <!-- React.js -->
+                <div class="swiper-slide skill-item">
+                    <i class="devicon-react-original colored mx-auto text-6xl"></i>
+                    <h3 class="mt-4 text-sm md:text-lg lg:text-lg">React.js</h3>
+                </div>
+                <!-- Next.js -->
+                <div class="swiper-slide skill-item">
+                    <i class="devicon-nextjs-plain colored mx-auto text-6xl"></i>
+                    <h3 class="mt-4 text-sm md:text-lg lg:text-lg">Next.js</h3>
+                </div>
+                <!-- Node.js -->
+                <div class="swiper-slide skill-item">
+                    <i class="devicon-nodejs-plain colored mx-auto text-6xl"></i>
+                    <h3 class="mt-4 text-sm md:text-lg lg:text-lg">Node.js</h3>
+                </div>
+                <!-- NestJS -->
+                <div class="swiper-slide skill-item">
+                    <i class="devicon-nestjs-plain colored mx-auto text-6xl"></i>
+                    <h3 class="mt-4 text-sm md:text-lg lg:text-lg">NestJS</h3>
+                </div>
+                <!-- MySQL -->
+                <div class="swiper-slide skill-item">
+                    <i class="devicon-mysql-plain colored mx-auto text-6xl"></i>
+                    <h3 class="mt-4 text-sm md:text-lg lg:text-lg">MySQL</h3>
+                </div>
+                <!-- MongoDB -->
+                <div class="swiper-slide skill-item">
+                    <i class="devicon-mongodb-plain colored mx-auto text-6xl"></i>
+                    <h3 class="mt-4 text-sm md:text-lg lg:text-lg">MongoDB</h3>
+                </div>
+                <!-- Bootstrap -->
+                <div class="swiper-slide skill-item">
+                    <i class="devicon-bootstrap-plain colored mx-auto text-6xl"></i>
+                    <h3 class="mt-4 text-sm md:text-lg lg:text-lg">Bootstrap</h3>
+                </div>
+                <!-- Tailwind CSS -->
+                <div class="swiper-slide skill-item">
+                    <i class="devicon-tailwindcss-plain colored mx-auto text-6xl"></i>
+                    <h3 class="mt-4 text-sm md:text-lg lg:text-lg">Tailwind CSS</h3>
+                </div>
+                <!-- WordPress -->
+                <div class="swiper-slide skill-item">
+                    <i class="devicon-wordpress-plain colored mx-auto text-6xl"></i>
+                    <h3 class="mt-4 text-sm md:text-lg lg:text-lg">WordPress</h3>
+                </div>
+                <!-- Prisma -->
+                <div class="swiper-slide skill-item">
+                    <i class="devicon-prisma-plain colored mx-auto text-6xl"></i>
+                    <h3 class="mt-4 text-sm md:text-lg lg:text-lg">Prisma</h3>
+                </div>
+                <!-- PostgreSQL -->
+                <div class="swiper-slide skill-item">
+                    <i class="devicon-postgresql-plain colored mx-auto text-6xl"></i>
+                    <h3 class="mt-4 text-sm md:text-lg lg:text-lg">PostgreSQL</h3>
+                </div>
+            </div>
+
+            <!-- Swiper Navigation Buttons -->
+            <!-- <div class="swiper-button-next-skill"></div>
+            <div class="swiper-button-prev-skill"></div> -->
+            <!-- Swiper Navigation Buttons -->
+            <!-- <div class="swiper-button-prev-skill text-white z-50"></div>
+            <div class="swiper-button-next-skill text-white z-50"></div>
+
+            <div class="swiper-pagination-akill mt-5"></div> -->
+
+        </div>
+
+        <div class="swiper-button-prev-skill text-white z-50"></div>
+            <div class="swiper-button-next-skill text-white z-50"></div>
+
+            <div class="swiper-pagination-akill mt-8"></div>
+    </div>
+</section>
+
+
+
+
+    <!-- Experience Section -->
+    <!-- <section id="experience" class=" py-20 bg-gray-800">
+        <div class="container mx-auto px-4 text-center py-5">
+            <h2 class="text-3xl font-bold mb-10">Experience</h2>
+            <div class="space-y-6">
+                <div class="experience-item bg-gray-700 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold">Project Name 1</h3>
+                    <p class="text-sm mt-2">Description about the project and what you contributed.</p>
+                </div>
+                <div class="experience-item bg-gray-700 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold">Project Name 2</h3>
+                    <p class="text-sm mt-2">Description about the project and what you contributed.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+    <section id="portfolio" class=" py-20 bg-gray-900">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-10">Portfolio</h2>
+    
+            <!-- Swiper Container -->
+            <div class="swiper-container relative"> <!-- Add relative positioning here -->
+                <div class="swiper-wrapper">
+                    <!-- Portfolio Item 1 -->
+                    <div class="swiper-slide portfolio-item bg-gray-700 p-6 rounded-lg">
+                        <div class="image-container mb-4">
+                            <img src="./images/outfield.gif" alt="Portfolio Project 1" class="w-full h-48 object-cover rounded-md">
+                        </div>
+                        <h3 class="text-xl font-bold">Ecommerce Website</h3>
+                        <p class="text-sm mt-2">A brief description of the project.</p>
+                    </div>
+    
+                    <!-- Portfolio Item 2 -->
+                    <div class="swiper-slide portfolio-item bg-gray-700 p-6 rounded-lg">
+                        <div class="image-container mb-4">
+                            <img src="./images/SayNoCash-site.gif" alt="Portfolio Project 2" class="w-full h-48 object-cover rounded-md">
+                        </div>
+                        <h3 class="text-xl font-bold">SayNoCash Website</h3>
+                        <p class="text-sm mt-2">A brief description of the project.</p>
+                    </div>
+
+                     <!-- Portfolio Item 3 -->
+                     <div class="swiper-slide portfolio-item bg-gray-700 p-6 rounded-lg">
+                        <div class="image-container mb-4">
+                            <img src="./images/SayNoCash-user-web.gif" alt="Portfolio Project 2" class="w-full h-48 object-cover rounded-md">
+                        </div>
+                        <h3 class="text-xl font-bold">SayNoCash User Webapp</h3>
+                        <p class="text-sm mt-2">A brief description of the project.</p>
+                    </div>
+
+                     <!-- Portfolio Item 4 -->
+                     <div class="swiper-slide portfolio-item bg-gray-700 p-6 rounded-lg">
+                        <div class="image-container mb-4">
+                            <img src="./images/SayNoCash-blog.gif" alt="Portfolio Project 2" class="w-full h-48 object-cover rounded-md">
+                        </div>
+                        <h3 class="text-xl font-bold">SayNoCash Blog Website</h3>
+                        <p class="text-sm mt-2">A brief description of the project.</p>
+                    </div>
+    
+                    <!-- Add more portfolio items as needed -->
+                </div>
+    
+                <!-- Swiper Controls -->
+                <div class="swiper-button-next absolute right-0 top-1/2 transform -translate-y-1/2"></div>
+                <div class="swiper-button-prev absolute left-0 top-1/2 transform -translate-y-1/2"></div>
+
+                <div class="swiper-pagination mt-10"></div>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <section id="experience" class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-4 text-center py-5">
+            <h2 class="text-3xl font-bold mb-12">Professional Experience</h2>
+            <div class="space-y-16">
+    
+                <!-- Project 1 -->
+                <div class="experience-item flex flex-col lg:flex-row bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="flex-shrink-0 mb-6 lg:mb-0 lg:mr-10">
+                        <div class="w-16 h-16 flex items-center justify-center bg-purple-600 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-2.28 0-4.5.91-6 2.59C3.25 12.94 2 15.24 2 17.75V20h20v-2.25c0-2.51-1.25-4.81-4-7.16C16.5 8.91 14.28 8 12 8zM12 12a4 4 0 014 4H8a4 4 0 014-4z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">E-commerce Platform</h3>
+                        <p class="text-lg text-gray-300 mb-4">Worked on the development of a dynamic e-commerce platform featuring a comprehensive admin panel for managing products, orders, and users.</p>
+                        <ul class="list-inside list-disc text-gray-400 text-left space-y-2">
+                            <li>Contributed to key features like order profile management, product showcase, user authentication, blog and order management.</li>
+                            <li>Collaborated with the team to improve performance and scalability, enhancing the platform’s overall user experience.</li>
+                            <li>Helped build a custom admin panel for detailed tracking and operations management.</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <!-- Project 2 -->
+                <div class="experience-item flex flex-col lg:flex-row bg-gray-800 p-8 rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300">
+                    <div class="flex-shrink-0 mb-6 lg:mb-0 lg:mr-10">
+                        <div class="w-16 h-16 flex items-center justify-center bg-green-600 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 11l3 3L22 4M6 13a9 9 0 11-12-12 9 9 0 0112 12z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-4">SayNoCash</h3>
+                        <p class="text-lg text-gray-300 mb-4">Contributed to the backend and frontend development, enabling seamless user experience and admin management features.</p>
+                        <ul class="list-inside list-disc text-gray-400 text-left space-y-2">
+                            <li>Participated in the backend development of core features.</li>
+                            <li>Contributed to the integration of a secure payment gateway and assisted in API development for seamless user transactions.</li>
+                            <li>Collaborated in designing and implementing the admin panel for managing users, payments, and transactions.</li>
+                            <li>Assisted in the development of the user-facing website, ensuring consistency with the app’s workflow.</li>
+                            <li>Helped build the company’s official website and blog, focusing on enhancing online presence and SEO.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <!-- Portfolio Section -->
+    <!-- <section id="portfolio" class="min-h-screen py-20 bg-gray-900">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-10">Portfolio</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="portfolio-item bg-gray-700 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold">Portfolio Project 1</h3>
+                    <p class="text-sm mt-2">A brief description of the project.</p>
+                </div>
+                <div class="portfolio-item bg-gray-700 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold">Portfolio Project 2</h3>
+                    <p class="text-sm mt-2">A brief description of the project.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+
+    <!-- Portfolio Section -->
+
+
+
+
+
+    <!-- Contact Me Section -->
+    <section id="contact" class=" py-20 bg-gray-800">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-10">Contact Me</h2>
+            <p class="mb-6">Feel free to reach out to me via email or social media!</p>
+            <p class="mb-4"><strong>Email:</strong> khantatanmoy@gmail.com</p>
+            <div>
+                <!-- Social Icons using FontAwesome -->
+                <!-- <a href="https://github.com" target="_blank" class="mr-4">
+                    <i class="fab fa-github fa-2x"></i>
+                </a> -->
+                <a href="https://www.linkedin.com/in/tanmoy-khanta/" target="_blank">
+                    <i class="fab fa-linkedin fa-2x mx-1"></i>
+                </a>
+                <!-- <a href="https://instagram.com" target="_blank" class="hover:text-teal-400">
+                    <i class="fab fa-instagram fa-2x mx-1"></i>
+                </a> -->
+                <a href="mailto:khantatanmoy@gmail.com" class="hover:text-teal-400">
+                    <i class="fas fa-envelope fa-2x mx-1"></i>
+                </a>
+                <a href="https://x.com/TanmoyKhanta" target="_blank" class="hover:text-teal-400">
+                    <i class="fab fa-twitter fa-2x mx-1"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const header = document.getElementById('header');
+    
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        
+    
+        // Scroll detection for header background color
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 5) { 
+                // If the user scrolls down, add the background color
+                header.classList.add('header-scrolled');
+            } else {
+                // If the user scrolls back to the top, remove the background color
+                header.classList.remove('header-scrolled');
+            }
+        });
+    
+        // Smooth scroll to sections
+        document.querySelectorAll('.scroll-to-section').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+    
+                // Close the mobile menu after clicking on a link
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+
+    <!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1, // Number of slides in smaller screens
+        spaceBetween: 30,
+        loop: true, // Infinite loop
+        autoplay: {
+            delay: 2000,
+            pauseOnMouseEnter: true,
+        },
+        effect: "coverflow",
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2, // For medium screens
+          },
+          1024: {
+            slidesPerView: 3, // For larger screens
+          },
+        }
+      });
+
+      var swiperSkill = new Swiper('.skills-slider', {
+        slidesPerView: 3,
+        // grid: {
+        //     rows: 2,
+        // }, // Number of slides in smaller screens
+        spaceBetween: 10,
+        // centeredSlides: true,
+        loop: true, // Infinite loop
+        autoplay: {
+            delay: 1000,
+            pauseOnMouseEnter: true,
+        },
+        // effect: "coverflow",
+        // coverflowEffect: {
+        //     rotate: 50,
+        //     stretch: 0,
+        //     depth: 100,
+        //     modifier: 1,
+        //     slideShadows: true,
+        // },
+        navigation: {
+          nextEl: '.swiper-button-next-skill',
+          prevEl: '.swiper-button-prev-skill',
+        },
+        pagination: {
+          el: '.swiper-pagination-akill',
+          clickable: true,
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 4, // For medium screens
+          },
+          1024: {
+            slidesPerView: 6, // For larger screens
+          },
+        }
+      });
+
+    </script>
+
+<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
+
+<!-- <script>
+    var swiper1 = new Swiper('.skills-slider', {
+        slidesPerView: 1, // Adjust the number of visible slides (responsive handling is done below)
+        spaceBetween: 20,
+        // loop: true,
+        // freeMode: true,
+        navigation: {
+            nextEl: '.swiper-button-next-skill',
+            prevEl: '.swiper-button-prev-skill',
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            },
+            1024: {
+                slidesPerView: 5,
+                spaceBetween: 40,
+            },
+        },
+    });
+</script> -->
+
+
+    
+
+</body>
+</html>
